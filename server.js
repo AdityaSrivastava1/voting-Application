@@ -11,6 +11,11 @@ const PORT = process.env.PORT || 3000;
 const userRoutes = require('./routes/userRoutes');
 const candidateRoutes = require('./routes/candidateRoutes');
 
+app.get("/" , function(req,res) {
+    res.send("Hello welcome to voting application system ");
+    
+})
+
 // Use the routers
 app.use('/user', userRoutes);
 app.use('/candidate', candidateRoutes);
